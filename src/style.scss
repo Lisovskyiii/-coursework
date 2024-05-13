@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import 'libs/bootstrap-reboot.min.scss';
+
+:root {
+	--main-color: rgba(14, 24, 255);
+}
+
+body {
+	margin: 0;
+	font-family: 'Montserrat', 'Roboto', sans-serif;
+}
+
+code {
+	font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+		monospace;
+}
+
+.app {
+	margin: 0px auto 0px auto;
+	padding: 150px 0px 100px 0px;
+	position: relative;
+	width: 1180px;
+}
