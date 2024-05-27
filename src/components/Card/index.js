@@ -1,5 +1,3 @@
-import image from '../../assets/img/photo1.jpg'
-
 import './style.scss'
 
 export const Card = ({
@@ -8,13 +6,12 @@ export const Card = ({
 	time,
 	place,
 	group,
-	id,
 	classes,
 	thumbnail
 }) => {
 	return (
-		<li key={id} className='card'>
-			<img src={image} alt='image1' />
+		<li className='card'>
+			<img src={`images/${thumbnail}`} alt={group} />
 			<div className='card__descr'>
 				<div className='card__group'>{group}</div>
 				<div className='card__subject'>{subject}</div>

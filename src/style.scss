@@ -15,9 +15,33 @@ code {
 		monospace;
 }
 
-.app {
+main {
 	margin: 0px auto 0px auto;
-	padding: 150px 0px 100px 0px;
-	position: relative;
+	padding: 120px 0px 50px 0px;
 	width: 1180px;
+}
+
+@media (max-width: 1240px) {
+	main {
+		max-width: 1000px;
+	}
+}
+
+@media (max-width: 1032px) {
+	main {
+		max-width: 760px;
+	}
+}
+
+@media (max-width: 808px) {
+	main {
+		max-width: 580px;
+	}
+}
+
+@media (max-width: 626px) {
+	main {
+		max-width: 100%;
+		padding-top: 130px;
+	}
 }

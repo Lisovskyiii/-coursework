@@ -1,14 +1,23 @@
+import { BrowserRouter as Router } from 'react-router-dom'
+import { Suspense } from 'react'
+
 import { AppHeader } from '../../modules/AppHeader'
-import { MainPage } from '../../pages/MainPage'
+import { AppRouter } from '../../AppRouter'
+import Spinner from '../../ui/Spinner'
+import '../../firebase'
 
 const App = () => {
 	return (
-		<>
+		<Router>
 			<AppHeader></AppHeader>
 			<div className='app'>
-				<MainPage></MainPage>
+				<main>
+					<Suspense fallback={<Spinner />}>
+						<AppRouter />
+					</Suspense>
+				</main>
 			</div>
-		</>
+		</Router>
 	)
 }
 

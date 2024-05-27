@@ -1,4 +1,6 @@
+import { useAuth } from '../../hooks/useAuth'
 import { useState } from 'react'
+import { useDispatch } from 'react-redux'
 import styled from 'styled-components'
 
 import { Header } from '../../components/Header'
@@ -25,17 +27,25 @@ const HeaderStyled = styled(Header)`
 `
 
 export const AppHeader = () => {
+	const { isAuth } = useAuth()
 	const [active, setActive] = useState(false)
+	const dispatch = useDispatch()
 
 	const isMenu = () => {
 		setActive(!active)
 	}
 
 	return (
-		<>
-			<HeaderStyled isMenu={isMenu} name='Лисовский К.А'>
-				<MenuStyled active={active} isMenu={isMenu}></MenuStyled>
-			</HeaderStyled>
-		</>
+		isAuth && (
+			<>
+				<HeaderStyled isMenu={isMenu} name='Лисовский К.А'>
+					<MenuStyled
+						active={active}
+						dispatch={dispatch}
+						isMenu={isMenu}
+					></MenuStyled>
+				</HeaderStyled>
+			</>
+		)
 	)
 }

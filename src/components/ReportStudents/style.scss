@@ -1,0 +1,47 @@
+.single-report {
+	&__img {
+		object-fit: cover;
+		width: 600px;
+		display: block;
+		margin-bottom: 20px;
+	}
+	&__ul {
+		display: flex;
+		flex-direction: column;
+		list-style-type: none;
+		padding: 0;
+		margin: 0;
+	}
+	&__li {
+		display: flex;
+		margin-top: 5px;
+		justify-content: space-between;
+		&-false {
+			color: #de0f0f;
+		}
+	}
+}
+
+@media (max-width: 808px) {
+	.single-report {
+		&__img {
+			width: 500px;
+		}
+		&__ul {
+			font-size: 14px;
+		}
+	}
+}
+
+@media (max-width: 626px) {
+	.single-report {
+		&__img {
+			width: 90%;
+		}
+		&__li {
+		}
+		&__name {
+			margin-right: 20px;
+		}
+	}
+}

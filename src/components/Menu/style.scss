@@ -54,3 +54,41 @@
 		}
 	}
 }
+
+@media (max-width: 1032px) {
+	.menu {
+		&__link {
+			font-size: 22px;
+			&-help,
+			&-settings,
+			&-exit {
+				&::before {
+					transform: translateY(0%);
+					left: -45px;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 626px) {
+	.menu {
+		width: 80%;
+		padding-left: 0;
+		&__list {
+			margin: 0 auto;
+			width: 40%;
+		}
+		&__link {
+			font-size: 20px;
+			&-help,
+			&-settings,
+			&-exit {
+				&::before {
+					transform: translateY(0%);
+					left: -45px;
+				}
+			}
+		}
+	}
+}

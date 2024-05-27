@@ -1,9 +1,10 @@
 import { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
+import { Link } from 'react-router-dom'
 
 import error from '../../assets/error.gif'
 import { store } from '../../store/store'
-import { fetchReports, selectAll } from './CardListSlice'
+import { fetchReports, selectAll } from '../../store/slices/CardListSlices'
 import Spinner from '../../ui/Spinner'
 import { Card } from '../../components/Card'
 import './style.scss'
@@ -48,7 +49,15 @@ export const CardList = ({ className }) => {
 			)
 		}
 		return arr.map(props => {
-			return <Card {...props} />
+			return (
+				<Link
+					key={props.id}
+					to={`/reports/${props.id}`}
+					style={{ textDecoration: 'none', color: 'inherit' }}
+				>
+					<Card {...props}></Card>
+				</Link>
+			)
 		})
 	}
 

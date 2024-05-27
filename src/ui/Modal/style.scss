@@ -1,0 +1,36 @@
+.modal {
+	padding: 30px 40px;
+	position: relative;
+	min-height: 200px;
+	background-color: #fff;
+	box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.25);
+	&__add-form,
+	&__login-form {
+		border-radius: 5%;
+		width: 350px;
+	}
+	&__report {
+		width: 600px;
+	}
+}
+
+@media (max-width: 808px) {
+	.modal {
+		&__report {
+			width: 500px;
+		}
+	}
+}
+
+@media (max-width: 626px) {
+	.modal {
+		&__report {
+			padding: 15px;
+			width: 90%;
+		}
+		&__add-form,
+		&__login-form {
+			width: 310px;
+		}
+	}
+}
