@@ -7,18 +7,18 @@ import Spinner from '../../ui/Spinner'
 import '../../firebase'
 
 const App = () => {
-	return (
-		<Router>
-			<AppHeader></AppHeader>
-			<div className='app'>
-				<main>
-					<Suspense fallback={<Spinner />}>
-						<AppRouter />
-					</Suspense>
-				</main>
-			</div>
-		</Router>
-	)
+  return (
+    <Router>
+      <AppHeader></AppHeader>
+      <div className='app'>
+        <main>
+          <Suspense fallback={<Spinner />}>
+            <AppRouter />
+          </Suspense>
+        </main>
+      </div>
+    </Router>
+  )
 }
 
 export default App
