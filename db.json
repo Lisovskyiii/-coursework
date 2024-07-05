@@ -1,55 +1,652 @@
 {
-	"reports": [
-		{
-			"id": 1,
-			"group": "СДП УИР-211",
-			"subject": "Базы данных",
-			"classes": "лек.",
-			"place": "Ожешко 22, 109 ауд.",
-			"time": "08:30 — 09:50",
-			"date": "20.03.2024",
-			"thumbnail": ""
-		},
-		{
-			"id": 2,
-			"group": "СДП КБ-211",
-			"subject": "Базы данных",
-			"classes": "лек.",
-			"place": "Ожешко 22, 109 ауд.",
-			"time": "08:30 — 09:50",
-			"date": "20.03.2024",
-			"thumbnail": ""
-		},
-		{
-			"id": 3,
-			"group": "СДП ИИ-211",
-			"subject": "Базы данных",
-			"classes": "лек.",
-			"place": "Ожешко 22, 109 ауд.",
-			"time": "08:30 — 09:50",
-			"date": "20.03.2024",
-			"thumbnail": ""
-		},
-		{
-			"id": 4,
-			"group": "СДП ПОИТ-211",
-			"subject": "Базы данных",
-			"classes": "лек.",
-			"place": "Ожешко 22, 109 ауд.",
-			"time": "08:30 — 09:50",
-			"date": "20.03.2024",
-			"thumbnail": ""
-		},
-		{
-			"id": 5,
-			"group": "СДП УИР-221",
-			"subject": "Базы данных",
-			"classes": "лек.",
-			"place": "Ожешко 22, 109 ауд.",
-			"time": "08:30 — 09:50",
-			"date": "20.03.2024",
-			"thumbnail": ""
-		}
-	],
-	"filters": ["all", "fire", "water", "wind", "earth"]
+  "reports": [
+    {
+      "id": 1,
+      "group": "СДП УИР-211",
+      "subject": "Базы данных",
+      "classes": "лек.",
+      "place": "Ожешко 22, 109 ауд.",
+      "time": "08:30 — 09:50",
+      "date": "20.03.2024",
+      "thumbnail": "photo1.jpg",
+      "students": [
+        {
+          "id": 1,
+          "firstName": "Кирилл",
+          "lastName": "Пупкин",
+          "detected": true
+        },
+        {
+          "id": 2,
+          "firstName": "Алексей",
+          "lastName": "Иванов",
+          "detected": true
+        },
+        {
+          "id": 3,
+          "firstName": "Мария",
+          "lastName": "Смирнова",
+          "detected": false
+        },
+        {
+          "id": 4,
+          "firstName": "Екатерина",
+          "lastName": "Кузнецова",
+          "detected": true
+        },
+        {
+          "id": 5,
+          "firstName": "Дмитрий",
+          "lastName": "Попов",
+          "detected": true
+        },
+        {
+          "id": 6,
+          "firstName": "Анна",
+          "lastName": "Соколова",
+          "detected": true
+        },
+        {
+          "id": 7,
+          "firstName": "Андрей",
+          "lastName": "Лебедев",
+          "detected": true
+        },
+        {
+          "id": 8,
+          "firstName": "Елена",
+          "lastName": "Козлова",
+          "detected": true
+        },
+        {
+          "id": 9,
+          "firstName": "Сергей",
+          "lastName": "Новиков",
+          "detected": true
+        },
+        {
+          "id": 10,
+          "firstName": "Ольга",
+          "lastName": "Морозова",
+          "detected": true
+        },
+        {
+          "id": 11,
+          "firstName": "Николай",
+          "lastName": "Петров",
+          "detected": true
+        },
+        {
+          "id": 12,
+          "firstName": "Татьяна",
+          "lastName": "Волкова",
+          "detected": false
+        },
+        {
+          "id": 13,
+          "firstName": "Иван",
+          "lastName": "Соловьев",
+          "detected": true
+        },
+        {
+          "id": 14,
+          "firstName": "Юлия",
+          "lastName": "Зайцева",
+          "detected": true
+        },
+        {
+          "id": 15,
+          "firstName": "Владимир",
+          "lastName": "Павлов",
+          "detected": true
+        },
+        {
+          "id": 16,
+          "firstName": "Алина",
+          "lastName": "Семенова",
+          "detected": true
+        },
+        {
+          "id": 17,
+          "firstName": "Михаил",
+          "lastName": "Егоров",
+          "detected": true
+        },
+        {
+          "id": 18,
+          "firstName": "Наталья",
+          "lastName": "Романова",
+          "detected": false
+        },
+        {
+          "id": 19,
+          "firstName": "Георгий",
+          "lastName": "Кириллов",
+          "detected": false
+        },
+        {
+          "id": 20,
+          "firstName": "Василиса",
+          "lastName": "Макарова",
+          "detected": true
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "group": "СДП КБ-211",
+      "subject": "Базы данных",
+      "classes": "практ.",
+      "place": "Ожешко 22, 321 ауд.",
+      "time": "10:05 — 11:30",
+      "date": "20.03.2024",
+      "thumbnail": "photo2.jpg",
+      "students": [
+        {
+          "id": 1,
+          "firstName": "Александр",
+          "lastName": "Смирнов",
+          "detected": false
+        },
+        {
+          "id": 2,
+          "firstName": "Ирина",
+          "lastName": "Кузнецова",
+          "detected": true
+        },
+        {
+          "id": 3,
+          "firstName": "Павел",
+          "lastName": "Попов",
+          "detected": true
+        },
+        {
+          "id": 4,
+          "firstName": "Светлана",
+          "lastName": "Лебедева",
+          "detected": true
+        },
+        {
+          "id": 5,
+          "firstName": "Григорий",
+          "lastName": "Козлов",
+          "detected": true
+        },
+        {
+          "id": 6,
+          "firstName": "Оксана",
+          "lastName": "Новикова",
+          "detected": true
+        },
+        {
+          "id": 7,
+          "firstName": "Владислав",
+          "lastName": "Морозов",
+          "detected": true
+        },
+        {
+          "id": 8,
+          "firstName": "Полина",
+          "lastName": "Петрова",
+          "detected": true
+        },
+        {
+          "id": 9,
+          "firstName": "Евгений",
+          "lastName": "Волков",
+          "detected": false
+        },
+        {
+          "id": 10,
+          "firstName": "Валерия",
+          "lastName": "Соловьева",
+          "detected": true
+        },
+        {
+          "id": 11,
+          "firstName": "Анатолий",
+          "lastName": "Зайцев",
+          "detected": true
+        },
+        {
+          "id": 12,
+          "firstName": "Марина",
+          "lastName": "Павлова",
+          "detected": true
+        },
+        {
+          "id": 13,
+          "firstName": "Роман",
+          "lastName": "Семенов",
+          "detected": true
+        },
+        {
+          "id": 14,
+          "firstName": "Виктория",
+          "lastName": "Егорова",
+          "detected": true
+        },
+        {
+          "id": 15,
+          "firstName": "Василий",
+          "lastName": "Романов",
+          "detected": true
+        },
+        {
+          "id": 16,
+          "firstName": "Алексей",
+          "lastName": "Кириллов",
+          "detected": false
+        },
+        {
+          "id": 17,
+          "firstName": "Ольга",
+          "lastName": "Макарова",
+          "detected": true
+        },
+        {
+          "id": 18,
+          "firstName": "Юрий",
+          "lastName": "Михайлов",
+          "detected": false
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "group": "СДП ИИ-211",
+      "subject": "Проектирование баз знаний",
+      "classes": "лаб.",
+      "place": "Ожешко 22, 222 ауд.",
+      "time": "11:40 — 12:55",
+      "date": "19.03.2024",
+      "thumbnail": "photo3.jpg",
+      "students": [
+        {
+          "id": 1,
+          "firstName": "Артем",
+          "lastName": "Сидоров",
+          "detected": true
+        },
+        {
+          "id": 2,
+          "firstName": "Ирина",
+          "lastName": "Ковалева",
+          "detected": true
+        },
+        {
+          "id": 3,
+          "firstName": "Павел",
+          "lastName": "Морозов",
+          "detected": false
+        },
+        {
+          "id": 4,
+          "firstName": "Елизавета",
+          "lastName": "Ильина",
+          "detected": true
+        },
+        {
+          "id": 5,
+          "firstName": "Глеб",
+          "lastName": "Федоров",
+          "detected": true
+        },
+        {
+          "id": 6,
+          "firstName": "Маргарита",
+          "lastName": "Андреева",
+          "detected": true
+        },
+        {
+          "id": 7,
+          "firstName": "Денис",
+          "lastName": "Тимофеев",
+          "detected": true
+        },
+        {
+          "id": 8,
+          "firstName": "Анастасия",
+          "lastName": "Лебедева",
+          "detected": true
+        },
+        {
+          "id": 9,
+          "firstName": "Артемий",
+          "lastName": "Никитин",
+          "detected": true
+        },
+        {
+          "id": 10,
+          "firstName": "Екатерина",
+          "lastName": "Смирнова",
+          "detected": true
+        },
+        {
+          "id": 11,
+          "firstName": "Никита",
+          "lastName": "Петров",
+          "detected": true
+        },
+        {
+          "id": 12,
+          "firstName": "Тамара",
+          "lastName": "Соколова",
+          "detected": false
+        },
+        {
+          "id": 13,
+          "firstName": "Илья",
+          "lastName": "Соловьев",
+          "detected": true
+        },
+        {
+          "id": 14,
+          "firstName": "Юлия",
+          "lastName": "Захарова",
+          "detected": true
+        },
+        {
+          "id": 15,
+          "firstName": "Валентин",
+          "lastName": "Павлов",
+          "detected": true
+        },
+        {
+          "id": 16,
+          "firstName": "Александра",
+          "lastName": "Семенова",
+          "detected": true
+        },
+        {
+          "id": 17,
+          "firstName": "Михаил",
+          "lastName": "Егоров",
+          "detected": true
+        },
+        {
+          "id": 18,
+          "firstName": "Надежда",
+          "lastName": "Романова",
+          "detected": false
+        },
+        {
+          "id": 19,
+          "firstName": "Даниил",
+          "lastName": "Кириллов",
+          "detected": false
+        },
+        {
+          "id": 20,
+          "firstName": "Владислава",
+          "lastName": "Макарова",
+          "detected": true
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "group": "СДП ПОИТ-211",
+      "subject": "Разработка мобильных приложений",
+      "classes": "лаб.",
+      "place": "Ожешко 22, 109 ауд.",
+      "time": "13:30 — 14:50",
+      "date": "19.03.2024",
+      "thumbnail": "photo4.jpg",
+      "students": [
+        {
+          "id": 1,
+          "firstName": "Александр",
+          "lastName": "Смирнов",
+          "detected": true
+        },
+        {
+          "id": 2,
+          "firstName": "Ирина",
+          "lastName": "Кузнецова",
+          "detected": true
+        },
+        {
+          "id": 3,
+          "firstName": "Павел",
+          "lastName": "Попов",
+          "detected": true
+        },
+        {
+          "id": 4,
+          "firstName": "Светлана",
+          "lastName": "Лебедева",
+          "detected": true
+        },
+        {
+          "id": 5,
+          "firstName": "Григорий",
+          "lastName": "Козлов",
+          "detected": true
+        },
+        {
+          "id": 6,
+          "firstName": "Оксана",
+          "lastName": "Новикова",
+          "detected": true
+        },
+        {
+          "id": 7,
+          "firstName": "Владислав",
+          "lastName": "Морозов",
+          "detected": false
+        },
+        {
+          "id": 8,
+          "firstName": "Полина",
+          "lastName": "Петрова",
+          "detected": true
+        },
+        {
+          "id": 9,
+          "firstName": "Евгений",
+          "lastName": "Волков",
+          "detected": true
+        },
+        {
+          "id": 10,
+          "firstName": "Валерия",
+          "lastName": "Соловьева",
+          "detected": true
+        },
+        {
+          "id": 11,
+          "firstName": "Анатолий",
+          "lastName": "Зайцев",
+          "detected": true
+        },
+        {
+          "id": 12,
+          "firstName": "Марина",
+          "lastName": "Павлова",
+          "detected": true
+        },
+        {
+          "id": 13,
+          "firstName": "Роман",
+          "lastName": "Семенов",
+          "detected": false
+        },
+        {
+          "id": 14,
+          "firstName": "Виктория",
+          "lastName": "Егорова",
+          "detected": true
+        },
+        {
+          "id": 15,
+          "firstName": "Василий",
+          "lastName": "Романов",
+          "detected": true
+        },
+        {
+          "id": 16,
+          "firstName": "Сергей",
+          "lastName": "Тихонов",
+          "detected": true
+        },
+        {
+          "id": 17,
+          "firstName": "Екатерина",
+          "lastName": "Андреева",
+          "detected": true
+        },
+        {
+          "id": 18,
+          "firstName": "Михаил",
+          "lastName": "Федоров",
+          "detected": true
+        },
+        {
+          "id": 19,
+          "firstName": "Татьяна",
+          "lastName": "Орлова",
+          "detected": true
+        },
+        {
+          "id": 20,
+          "firstName": "Андрей",
+          "lastName": "Макаров",
+          "detected": false
+        },
+        {
+          "id": 21,
+          "firstName": "Юлия",
+          "lastName": "Николаева",
+          "detected": true
+        },
+        {
+          "id": 22,
+          "firstName": "Дмитрий",
+          "lastName": "Захаров",
+          "detected": true
+        },
+        {
+          "id": 23,
+          "firstName": "Елена",
+          "lastName": "Жукова",
+          "detected": true
+        },
+        {
+          "id": 24,
+          "firstName": "Антон",
+          "lastName": "Беляев",
+          "detected": false
+        },
+        {
+          "id": 25,
+          "firstName": "Лидия",
+          "lastName": "Тимофеева",
+          "detected": true
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "group": "СДП УИР-221",
+      "subject": "Базы данных",
+      "classes": "сем.",
+      "place": "Ожешко 22, 122 ауд.",
+      "time": "08:30 — 09:50",
+      "date": "18.03.2024",
+      "thumbnail": "photo5.jpg",
+      "students": [
+        {
+          "id": 1,
+          "firstName": "Александр",
+          "lastName": "Смирнов",
+          "detected": true
+        },
+        {
+          "id": 2,
+          "firstName": "Ирина",
+          "lastName": "Кузнецова",
+          "detected": true
+        },
+        {
+          "id": 3,
+          "firstName": "Павел",
+          "lastName": "Попов",
+          "detected": true
+        },
+        {
+          "id": 4,
+          "firstName": "Светлана",
+          "lastName": "Лебедева",
+          "detected": true
+        },
+        {
+          "id": 5,
+          "firstName": "Григорий",
+          "lastName": "Козлов",
+          "detected": true
+        },
+        {
+          "id": 6,
+          "firstName": "Оксана",
+          "lastName": "Новикова",
+          "detected": true
+        },
+        {
+          "id": 7,
+          "firstName": "Владислав",
+          "lastName": "Морозов",
+          "detected": true
+        },
+        {
+          "id": 8,
+          "firstName": "Полина",
+          "lastName": "Петрова",
+          "detected": true
+        },
+        {
+          "id": 9,
+          "firstName": "Евгений",
+          "lastName": "Волков",
+          "detected": true
+        },
+        {
+          "id": 10,
+          "firstName": "Валерия",
+          "lastName": "Соловьева",
+          "detected": true
+        },
+        {
+          "id": 11,
+          "firstName": "Анатолий",
+          "lastName": "Зайцев",
+          "detected": true
+        },
+        {
+          "id": 12,
+          "firstName": "Марина",
+          "lastName": "Павлова",
+          "detected": true
+        },
+        {
+          "id": 13,
+          "firstName": "Роман",
+          "lastName": "Семенов",
+          "detected": true
+        },
+        {
+          "id": 14,
+          "firstName": "Виктория",
+          "lastName": "Егорова",
+          "detected": true
+        },
+        {
+          "id": 15,
+          "firstName": "Василий",
+          "lastName": "Романов",
+          "detected": true
+        }
+      ]
+    }
+  ]
 }
