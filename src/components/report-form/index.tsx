@@ -1,3 +1,5 @@
+import { fieldsReport } from 'constants/FieldConstants';
+
 import { FormField } from 'components/form-field';
 import { ErrorMessage, Field, Form, Formik } from 'formik';
 import { Button } from 'ui/button';
@@ -52,27 +54,16 @@ export const ReportForm = ({
             <img src={close} alt="close" />
           </button>
 
-          <FormField
-            classInput={styles.input}
-            classLabel={styles.label}
-            type="text"
-            name="subject"
-            label="Дисциплина"
-          />
-          <FormField
-            classInput={styles.input}
-            classLabel={styles.label}
-            type="text"
-            name="group"
-            label="Учебная группа"
-          />
-          <FormField
-            classInput={styles.input}
-            classLabel={styles.label}
-            type="number"
-            name="audience"
-            label="Номер аудитории"
-          />
+          {fieldsReport.map(({ label, name, type }) => (
+            <FormField
+              key={name}
+              classInput={styles.input}
+              classLabel={styles.label}
+              type={type}
+              name={name}
+              label={label}
+            />
+          ))}
 
           <label className={styles.label} htmlFor="classes">
             Вид занятия
