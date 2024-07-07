@@ -1,18 +1,28 @@
+import cn from 'classnames';
+
 import styles from './style.module.scss';
 
 interface InputProps {
-  name: string;
+  name?: string;
   type: string;
+  className?: string;
   autoComplete?: string;
   [key: string]: any;
 }
 
-export const Input = ({ name, type, value, autoComplete, ...props }: InputProps): JSX.Element => (
+export const Input = ({
+  name,
+  className,
+  type,
+  value,
+  autoComplete,
+  ...props
+}: InputProps): JSX.Element => (
   <input
     {...props}
     autoComplete={autoComplete}
     value={value}
-    className={styles.input}
+    className={cn(styles.input, className)}
     name={name}
     type={type}
   />
