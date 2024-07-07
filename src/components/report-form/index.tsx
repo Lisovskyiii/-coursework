@@ -1,10 +1,10 @@
+import { FormField } from 'components/form-field';
 import { ErrorMessage, Field, Form, Formik } from 'formik';
+import { Button } from 'ui/button';
+import { Modal } from 'ui/modal';
 import { ValidateSchemaReportType } from 'utils/ValidateForm';
 
 import close from '../../assets/icons/close.svg';
-import { Button } from '../../ui/button';
-import { Input } from '../../ui/input';
-import { Modal } from '../../ui/modal';
 
 import styles from './style.module.scss';
 
@@ -51,22 +51,28 @@ export const ReportForm = ({
           >
             <img src={close} alt="close" />
           </button>
-          <label className={styles.label} htmlFor="subject">
-            Дисциплина
-          </label>
-          <Field name="subject" type="text" as={Input} />
-          <ErrorMessage name="subject" className={styles.error} component="div" />
-          <label className={styles.label} htmlFor="group">
-            Учебная группа
-          </label>
-          <Field name="group" type="text" as={Input} />
-          <ErrorMessage name="group" className={styles.error} component="div" />
 
-          <label className={styles.label} htmlFor="audience">
-            Номер аудитории
-          </label>
-          <Field name="audience" type="number" as={Input} />
-          <ErrorMessage name="audience" className={styles.error} component="div" />
+          <FormField
+            classInput={styles.input}
+            classLabel={styles.label}
+            type="text"
+            name="subject"
+            label="Дисциплина"
+          />
+          <FormField
+            classInput={styles.input}
+            classLabel={styles.label}
+            type="text"
+            name="group"
+            label="Учебная группа"
+          />
+          <FormField
+            classInput={styles.input}
+            classLabel={styles.label}
+            type="number"
+            name="audience"
+            label="Номер аудитории"
+          />
 
           <label className={styles.label} htmlFor="classes">
             Вид занятия
@@ -79,8 +85,7 @@ export const ReportForm = ({
           </Field>
           <ErrorMessage name="classes" className={styles.error} component="div" />
 
-          <Field className={styles.file} name="file" type="file" />
-          <ErrorMessage name="file" className={styles.error} component="div" />
+          <FormField classInput={styles.file} type="file" name="file" />
 
           <Button className={styles.button} type="submit" disabled={isSubmitting}>
             Отправить

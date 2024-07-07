@@ -1,9 +1,8 @@
-import { ErrorMessage, Field, Form, Formik } from 'formik';
+import { FormField } from 'components/form-field';
+import { Form, Formik } from 'formik';
+import { Button } from 'ui/button';
+import { Modal } from 'ui/modal';
 import { ValidateSchemaLoginType } from 'utils/ValidateForm';
-
-import { Button } from '../../ui/button';
-import { Input } from '../../ui/input';
-import { Modal } from '../../ui/modal';
 
 import styles from './style.module.scss';
 
@@ -31,18 +30,24 @@ export const LoginForm = ({ className, validateSchema, onLogin }: ILoginFormProp
       {({ isSubmitting }) => (
         <Form className={styles.loginForm}>
           <h2 className={styles.title}>Авторизация</h2>
-          <label className={styles.label} htmlFor="email">
-            Логин
-          </label>
-          <Field name="email" type="text" autoComplete="username" as={Input} />
-          <ErrorMessage name="email" className={styles.error} component="div" />
 
-          <label className={styles.label} htmlFor="password">
-            Пароль
-          </label>
-          <Field name="password" type="password" autoComplete="current-password" as={Input} />
+          <FormField
+            classInput={styles.input}
+            classLabel={styles.label}
+            type="text"
+            name="email"
+            label="Логин"
+            autoComplete="username"
+          />
 
-          <ErrorMessage name="password" className={styles.error} component="div" />
+          <FormField
+            classInput={styles.input}
+            classLabel={styles.label}
+            type="password"
+            name="password"
+            label="Пароль"
+            autoComplete="current-password"
+          />
 
           <Button className={styles.btn} type="submit" disabled={isSubmitting}>
             Отправить
