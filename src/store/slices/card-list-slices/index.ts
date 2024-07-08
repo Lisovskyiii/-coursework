@@ -19,7 +19,7 @@ const initialState: IInitialStateReports = reportsAdapter.getInitialState({
 export const fetchReports = createAsyncThunk('reports/fetchReports', async () => {
   const { request } = useHttp();
 
-  return request<Report[]>({ url: 'http://localhost:3001/reports' });
+  return request<Report[]>({ url: `${process.env.REACT_APP_API_URL}/reports` });
 });
 
 const reportsSlice = createSlice({
