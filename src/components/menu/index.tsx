@@ -1,3 +1,5 @@
+import { ROUTES } from 'constants/RoutesConstants';
+
 import { Link } from 'react-router-dom';
 import cn from 'classnames';
 import { useAppDispatch } from 'hooks/useReduxTypedHook';
@@ -27,7 +29,7 @@ export const Menu = ({ className, isMenu, dispatch }: IMenuProps): JSX.Element =
           <a href="#">Настройки</a>
         </li>
         <li className={cn(styles.link, styles.exit)}>
-          <Link onClick={() => dispatch(removeUser())} to="/login">
+          <Link onClick={() => dispatch(removeUser())} to={ROUTES.LOGIN}>
             Выйти
           </Link>
         </li>

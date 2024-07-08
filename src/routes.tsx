@@ -1,3 +1,5 @@
+import { ROUTES } from 'constants/RoutesConstants';
+
 import { LoginPage } from './pages/login-page';
 import { MainPage } from './pages/main-page';
 import { SingleReportPage } from './pages/single-report-page';
@@ -9,18 +11,18 @@ interface IRoutes {
 
 export const privateRoutes: IRoutes[] = [
   {
-    path: '/',
+    path: ROUTES.HOME,
     element: <MainPage />
   },
   {
-    path: '/reports/:id',
+    path: ROUTES.REPORT,
     element: <SingleReportPage />
   }
 ];
 
 export const publicRoutes: IRoutes[] = [
   {
-    path: '/login',
+    path: ROUTES.LOGIN,
     element: <LoginPage />
   }
 ];

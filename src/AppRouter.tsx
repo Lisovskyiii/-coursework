@@ -1,3 +1,5 @@
+import { ROUTES } from 'constants/RoutesConstants';
+
 import { useEffect } from 'react';
 import { Route, Routes, useNavigate } from 'react-router-dom';
 
@@ -11,9 +13,9 @@ export const AppRouter = (): JSX.Element => {
   useEffect(
     () => {
       if (isAuth) {
-        navigate('');
+        navigate(ROUTES.HOME);
       } else {
-        navigate('login');
+        navigate(ROUTES.LOGIN);
       }
     }, // eslint-disable-next-line
     [isAuth]

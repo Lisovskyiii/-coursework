@@ -1,3 +1,5 @@
+import { ROUTES } from 'constants/RoutesConstants';
+
 import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import cn from 'classnames';
@@ -53,7 +55,7 @@ export const CardList = ({ className }: ICardListProps): JSX.Element => {
     return arr.map((props) => (
       <Link
         key={props.id}
-        to={`/reports/${props.id}`}
+        to={ROUTES.REPORT.replace(':id', props.id.toString())}
         style={{ textDecoration: 'none', color: 'inherit' }}
       >
         <Card {...props} />

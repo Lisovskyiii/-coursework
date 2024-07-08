@@ -1,3 +1,5 @@
+import { ROUTES } from 'constants/RoutesConstants';
+
 import { useNavigate } from 'react-router-dom';
 import { getAuth, signInWithEmailAndPassword } from 'firebase/auth';
 import { useAppDispatch } from 'hooks/useReduxTypedHook';
@@ -28,7 +30,7 @@ export const Login = (): JSX.Element => {
             token: user.refreshToken
           })
         );
-        navigate('');
+        navigate(ROUTES.HOME);
       })
       .catch(() => alert('Неверные данные'));
   };
