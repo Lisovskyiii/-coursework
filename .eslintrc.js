@@ -11,7 +11,8 @@ module.exports = {
   },
   env: {
     browser: true,
-    node: true
+    node: true,
+    'jest/globals': true
   },
   plugins: [
     'react-hooks',
@@ -23,7 +24,8 @@ module.exports = {
     'dirnames',
     'unicorn',
     'jsx-a11y',
-    'react-refresh'
+    'react-refresh',
+    'jest'
   ],
   settings: {
     'import/resolver': {
@@ -50,12 +52,20 @@ module.exports = {
     'no-shadow': 'off',
     'max-lines': ['warn', { max: 124 }],
 
+    //jest
+    'jest/no-disabled-tests': 'warn',
+    'jest/no-focused-tests': 'error',
+    'jest/no-identical-title': 'error',
+    'jest/prefer-to-have-length': 'warn',
+    'jest/valid-expect': 'error',
+
     // Override default airbnb rules
     'no-plusplus': ['error', { allowForLoopAfterthoughts: true }],
     'no-negated-condition': 'warn',
     'default-case': 'off',
     'no-use-before-define': 'off',
     'prefer-regex-literals': 'off',
+    'implicit-arrow-linebreak': 'off',
 
     //react-refresh
     'react-refresh/only-export-components': ['warn', { allowConstantExport: true }],
