@@ -23,6 +23,7 @@ export const MainPage = (): JSX.Element => {
       <ModalMain
         className={cn(styles.modalMain, { [styles.active]: activeModal })}
         onCloseModal={onCloseModal}
+        activeModal={activeModal}
       />
       <AddReport className={styles.addReport} onAddReport={onAddReport} />
       <CardList className={styles.cardList} />

@@ -6,6 +6,7 @@ type ExtendedFieldHook = FieldHookConfig<string> & {
   type: string;
   classLabel?: string;
   classInput?: string;
+  onChangeInput?: (value: string) => void;
 };
 
 export const FormField = ({
@@ -13,9 +14,15 @@ export const FormField = ({
   label,
   classInput,
   classLabel,
+  onChangeInput,
   ...props
 }: ExtendedFieldHook): JSX.Element => {
   const [field, meta] = useField(props);
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    field.onChange(e); // Formik обработчик
+    onChangeInput?.(e.target.value); // Ваш кастомный обработчик
+  };
 
   return (
     <>
@@ -25,7 +32,7 @@ export const FormField = ({
         </label>
       ) : null}
 
-      <Input type={type} className={classInput} {...props} {...field} />
+      <Input type={type} className={classInput} {...props} {...field} onChange={handleChange} />
       {meta.touched && meta.error ? (
         <div style={{ color: '#e53e3e', marginTop: 5, fontSize: 12 }}>{meta.error}</div>
       ) : null}

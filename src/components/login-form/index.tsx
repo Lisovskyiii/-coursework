@@ -1,5 +1,10 @@
 import { fieldsLogin } from 'constants/FieldConstants';
+import { useNavigate } from 'react-router-dom';
 
+import { ROUTES } from 'constants/RoutesConstants';
+import { setUser } from '../../store/slices/user-slices';
+import { useAppDispatch } from 'hooks/useReduxTypedHook';
+import { login } from 'api/auth.api';
 import { FormField } from 'components/form-field';
 import { Form, Formik } from 'formik';
 import { Button } from 'ui/button';
@@ -10,46 +15,55 @@ import styles from './style.module.scss';
 
 interface ILoginFormProps {
   className: string;
-  onLogin: (values: { email: string; password: string }) => void;
   validateSchema: ValidateSchemaLoginType;
 }
 
-export const LoginForm = ({ className, validateSchema, onLogin }: ILoginFormProps): JSX.Element => (
-  <Modal className={className} type="loginForm">
-    <Formik
-      initialValues={{
-        email: '',
-        password: ''
-      }}
-      validationSchema={validateSchema}
-      onSubmit={(values, { setSubmitting }) => {
-        onLogin(values);
-        setTimeout(() => {
-          setSubmitting(false);
-        }, 3000);
-      }}
-    >
-      {({ isSubmitting }) => (
-        <Form className={styles.loginForm}>
-          <h2 className={styles.title}>Авторизация</h2>
+export const LoginForm = ({ className, validateSchema }: ILoginFormProps): JSX.Element => {
+  const navigate = useNavigate();
+  const dispatch = useAppDispatch();
 
-          {fieldsLogin.map(({ label, name, type, autoComplete }) => (
-            <FormField
-              key={name}
-              classInput={styles.input}
-              classLabel={styles.label}
-              type={type}
-              name={name}
-              label={label}
-              autoComplete={autoComplete}
-            />
-          ))}
+  return (
+    <Modal className={className} type="loginForm">
+      <Formik
+        initialValues={{
+          email: '',
+          password: ''
+        }}
+        validationSchema={validateSchema}
+        onSubmit={(values, { setSubmitting }) => {
+          login(values)
+            .then(({ user }) => {
+              dispatch(setUser(user));
+              navigate(ROUTES.HOME);
+            })
+            .catch(() => alert('Неверные данные'));
+          setTimeout(() => {
+            setSubmitting(false);
+          }, 3000);
+        }}
+      >
+        {({ isSubmitting }) => (
+          <Form className={styles.loginForm}>
+            <h2 className={styles.title}>Авторизация</h2>
 
-          <Button className={styles.btn} type="submit" disabled={isSubmitting}>
-            Отправить
-          </Button>
-        </Form>
-      )}
-    </Formik>
-  </Modal>
-);
+            {fieldsLogin.map(({ label, name, type, autoComplete }) => (
+              <FormField
+                key={name}
+                classInput={styles.input}
+                classLabel={styles.label}
+                type={type}
+                name={name}
+                label={label}
+                autoComplete={autoComplete}
+              />
+            ))}
+
+            <Button className={styles.btn} type="submit" disabled={isSubmitting}>
+              Отправить
+            </Button>
+          </Form>
+        )}
+      </Formik>
+    </Modal>
+  );
+};

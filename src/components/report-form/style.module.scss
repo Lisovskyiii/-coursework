@@ -10,6 +10,10 @@
   font-weight: 600;
 }
 
+.input{
+  margin-top: 30px;
+}
+
 .close {
   position: absolute;
   right: 20px;
@@ -49,8 +53,9 @@
 .classes {
   height: 40px;
   width: 100%;
+  margin-top: 15px;
   padding: 0 20px;
-  font-size: 12px;
+  font-size: 14px;
   text-align: left;
   appearance: none;
   background: #fff;

@@ -7,6 +7,7 @@ interface InputProps {
   type: string;
   className?: string;
   autoComplete?: string;
+  onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
   [key: string]: any;
 }
 
@@ -16,11 +17,13 @@ export const Input = ({
   type,
   value,
   autoComplete,
+  onChange,
   ...props
 }: InputProps): JSX.Element => (
   <input
     {...props}
     autoComplete={autoComplete}
+    onChange={(e) => onChange?.(e)}
     value={value}
     className={cn(styles.input, className)}
     name={name}

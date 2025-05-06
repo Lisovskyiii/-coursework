@@ -5,8 +5,6 @@ import { AppRouter } from '../../AppRouter';
 import { AppHeader } from '../../modules/app-header';
 import Spinner from '../../ui/spinner';
 
-import '../../firebase';
-
 const App = (): JSX.Element => (
   <Router>
     <AppHeader />
